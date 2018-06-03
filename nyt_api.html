@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--script id="jsondata" type="application/json" src="/catalogo.json" class="json"> </script-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=" http://requirejs.org/docs/release/2.2.0/minified/require.js"></script>
+    <script src="consuming_api.js"></script>
+</head>
+<body>
+
+<h2>Best Selling Books by New York Times API</h2>
+<p>Search for best selling lists of books, by filling out any of the following parameters</p>
+
+  <div class="form-group">
+    <label for="author">Author:</label>
+    <input type="text" class="form-control" id="author">
+  </div>
+  <div class="form-group">
+    <label for="age">Recommended ages:</label>
+    <input type="text" class="form-control" id="age">
+  </div>
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input type="text" class="form-control" id="price">
+  </div>
+  <div class="form-group">
+    <label for="publisher">Publisher:</label>
+    <input type="text" class="form-control" id="publisher">
+  </div>
+  <button type="submit" class="btn btn-default" onclick="call_nyt_api()">Search</button>
+<br>
+<br>
+<br>
+<p>Results</p>
+<ul class="list-group">
+  <li class="list-group-item" id="1"></li>
+  <li class="list-group-item" id="2"></li>
+  <li class="list-group-item" id="3"></li>
+  <li class="list-group-item" id="4"></li>
+  <li class="list-group-item" id="5"></li>
+</ul>
+</body>
+</html>
